@@ -1,0 +1,11 @@
+DateFormat format=new SimpleDateFormat("yyyy-MM-dd");
+
+try {
+    format.parse("2012-09-01");//成功
+    format.parse("2012-09-32");//成功
+
+    format.setLenient(false);
+    format.parse("2012-09-32");//Exception
+} catch (ParseException e) {
+    //失敗時の処理…
+}
